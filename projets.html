@@ -1,0 +1,55 @@
+<!-- Page Content Holder -->
+<div id="content" class="listWork">
+    <figure class="projet">
+        <img class="img-responsive" src="assets/img/marhime_renault1.jpg" alt="Renault">
+        <a href="#popup" class="display-popup">
+            <div class="cadre-pop"></div>
+            <h3 class="titre-pop">RENAULT</h3>
+            <p class="sous-titre-pop">WEBMASTER</p>
+        </a>
+    </figure>
+    <figure class="projet1">
+        <img class="img-responsive" src="assets/img/marhime_garnier.jpg" alt="garnier">
+        <a href="#popup" class="display-popup">
+        <div class="cadre-pop"></div>
+            <h3 class="titre-pop">GARNIER</h3>
+            <p class="sous-titre-pop">WEBMASTER</p>
+        </a>
+    </figure>
+    <figure class="projet1">
+        <img class="img-responsive" src="assets/img/marhime_michelin1.jpg" alt="michelin">
+        <a href="#popup" class="display-popup">
+        <div class="cadre-pop"></div>
+            <h3 class="titre-pop">MICHELIN</h3>
+            <p class="sous-titre-pop">WEBMASTER</p>
+        </a>
+    </figure>
+    <figure class="projet">
+        <img class="img-responsive" src="assets/img/marhime_laposte.jpg" alt="laposte">
+        <a href="#popup" class="display-popup">
+        <div class="cadre-pop"></div>
+            <h3 class="titre-pop">LAPOSTE</h3>
+            <p class="sous-titre-pop">WEBMASTER</p>
+        </a>
+    </figure>
+    <figure class="projet1">
+        <img class="img-responsive" src="assets/img/marhime_nissan1.jpg" alt="nissan france">
+        <a href="#popup" class="display-popup">
+        <div class="cadre-pop"></div>
+            <h3 class="titre-pop">NISSAN</h3>
+            <p class="sous-titre-pop">WEBMASTER</p>
+        </a>
+    </figure>
+</div>
+
+
+<script>
+    $(function () {
+        $('.display-popup').click(function(e){
+            e.preventDefault();
+            var href = $(this).attr('href');
+            $(href).detach().appendTo('body').css('display', 'initial');
+        });
+
+    });
+</script>

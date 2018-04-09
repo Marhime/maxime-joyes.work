@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+        <title>Portfolio</title>
+         <!-- Bootstrap CSS CDN -->
+        <!-- Our Custom CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+        <link rel="stylesheet" href="assets/css/style4.css">
+        <link rel="stylesheet" href="assets/css/about.scss">
+    </head>
+    <body>
+        <div class="vertical-fit">
+            <!-- Sidebar Holder -->
+                <nav id="sidebar">
+                        <div id="toggle">
+                            <div class="patty"></div>
+                        </div>
+
+                    <div id="menu-menu-principal-container">
+                        <ul id="menu-menu-principal" class="menu">
+                            <li>
+                                <a class="homepage">
+                                    Accueil
+                                </a>
+                            </li>
+                            <li>
+                                <a class="monCV">
+                                    Mon CV
+                                </a>
+                            </li>
+                            <li>
+                                <a class="projets">
+                                    Projets
+                                </a>
+                            </li>
+                            <li>
+                                <a class="contact">
+                                    Contact
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+
+            <!-- Page Content Holder -->
+            <div id="outer-content">
+                <div id="content" class="home">
+                    <div class="bg-video">
+                    </div>
+                </div>
+            </div>
+            </div>
+        </div>
+
+
+
+
+
+        <!-- jQuery CDN -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script> 
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+        <script src="assets/js/typed.min.js"></script>
+         <!-- Bootstrap Js CDN -->
+
+         <script type="text/javascript">
+         
+             $(function () {
+                 $('#toggle').on('click', function () {
+                    var $parent = $(this).parent('nav');
+                    $parent.toggleClass("open");
+                 });
+
+                    $(".homepage").click(function(){
+                        $.ajax({url: "home.html", success: function(result){
+                            $("#sidebar").removeClass("open");
+                            $("#outer-content").hide().appendTo("#outer-content").html(result).fadeIn(1000);
+                            }});
+                    });
+                    $(".monCV").click(function(){
+                        $.ajax({url: "/assets/svg/blob.svg", success: function(result){
+                            $("#sidebar").removeClass("open");
+                            $("#outer-content").hide().appendTo("#outer-content").html(result).fadeIn();
+                            }});
+                    });
+                    $(".projets").click(function(){
+                        $.ajax({url: "projets.html", success: function(result){
+                            $("#sidebar").removeClass("open");
+                            $("#outer-content").hide().appendTo("#outer-content").html(result).fadeIn(1000);
+                            }});
+                    });
+                    $(".contact").click(function(){
+                        $.ajax({url: "contact.html", success: function(result){
+                            $("#sidebar").removeClass("open");
+                            $("#outer-content").hide().appendTo("#outer-content").html(result).fadeIn();
+                            }});
+                    });
+             });                        
+         </script>
+    </body>
+</html>
